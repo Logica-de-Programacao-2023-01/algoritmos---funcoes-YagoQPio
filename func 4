@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func secondLargest(numbers []int) int {
+    largest := numbers[0]
+    secondLargest := numbers[0]
+    for _, number := range numbers {
+        if number > largest {
+            secondLargest = largest
+            largest = number
+        } else if number > secondLargest && number != largest {
+            secondLargest = number
+        }
+    }
+    return secondLargest
+}
+
+func main() {
+    nums := []int{1, 3, 2, 4, 5}
+    fmt.Println(secondLargest(nums)
