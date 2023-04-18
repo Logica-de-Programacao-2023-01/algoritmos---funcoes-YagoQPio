@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func concatStrings(strs []string) string {
+    result := ""
+    for _, str := range strs {
+        result += str
+    }
+    return result
+}
+
+func main() {
+    strings := []string{"hello", ",", " ", "world", "!"}
+    fmt.Println(concatStrings(strings)) 
+}
